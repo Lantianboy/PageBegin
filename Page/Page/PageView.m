@@ -8,6 +8,7 @@
 
 #import "PageView.h"
 #import "CollectionCell.h"
+#import "VCRoot.h"
 
 #define kHighlighted [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1.0]
 #define kAfterDelayTime 0.3 //最后按钮显示的时间
@@ -124,7 +125,10 @@ static NSString * reuseIdentifier = @"CollectionCell" ;
 -(void)removeViewBtn:(UIButton *)btn
 {
     btn.backgroundColor = [UIColor clearColor] ;
-    [ self removeFromSuperview] ;
+    //[ self removeFromSuperview] ;
+    
+    VCRoot * vc = [[VCRoot alloc] init] ;
+    self.window.rootViewController = vc ;
 }
 
 

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  VCRoot.h
 //  Page
 //
 //  Created by 最爱是深蓝 on 2017/8/29.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-@property(nonatomic,strong)UIButton * btn ;
+@interface VCRoot : UIViewController
+
 @end

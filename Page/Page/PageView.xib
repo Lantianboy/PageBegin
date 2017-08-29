@@ -37,7 +37,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="btn" destination="idC-7E-s5C" id="28g-Z3-jZ5"/>
+                <outlet property="btn" destination="idC-7E-s5C" id="rWE-pa-aVm"/>
                 <outlet property="collection" destination="3ZN-vS-T7B" id="hBg-xk-mf4"/>
                 <outlet property="pageV" destination="rRn-P4-p9R" id="Cj4-sh-W59"/>
             </connections>

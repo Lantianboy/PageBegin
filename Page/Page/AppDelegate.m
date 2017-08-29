@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
+#import "VCRoot.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+   ViewController * vi = [[ViewController alloc]init] ;
+//    UINavigationController * na = [[UINavigationController alloc] initWithRootViewController:vi] ;
+//    self.window.rootViewController = na ;
+//    [self.window makeKeyWindow] ;
+    
+    
+    BOOL isFirst = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isFirst"] boolValue] ;
+    if (!isFirst) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"isFirst"] ;
+        
+        self.window.rootViewController = vi ;
+    }else{
+        VCRoot * vc = [[VCRoot alloc]init] ;
+        self.window.rootViewController = vc ;
+    }
     return YES;
 }
 
